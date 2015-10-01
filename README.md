@@ -17,6 +17,12 @@ $location = "http://somedomain.tld.com/somefolder";
 
 ```
 
+If you are using apache make sure you put in the share folder the .htaccess folder included if you have not done so already. If it is not there it will try to make it.
+
+If you are on ngix please disable scripts in the directory else someone could upload a shell and screw you over. Some info can be found [here](http://stackoverflow.com/questions/22280764/deny-running-scripts-in-nginx-for-specific-url)
+
+Lastly, make sure the protected directory is not allowed to be publicly seen such as thru the use of the included .htaccess file or disabling it per your webserver of choice.
+
 ##Sharex Setup
 
 You can get this menu by right-click on the sharex icon.
