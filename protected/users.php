@@ -1,11 +1,11 @@
-<?
+<?php
 $users = array(); // Do not touch this line!!!!!
 /* To add a user do the following:
-$users['username'] = "password"; 
+$users['username'] = "password";
 Make sure if you put in a " to escape it like so:
 \"
 */
-$users['some user'] = "some password";
+$users['user'] = "some password";
 /*
 The MIT License (MIT)
 
