@@ -8,6 +8,7 @@ $useRandomString = false; // Will cause the script to create random ish strings 
 $randomStringLength = 10; // The length of the random string if you choose to use that.
 $useCustomAlphabet = false; // Want to use specfic letters/numbers then set to true and write out what you want below
 $customAlphabet = "0123456789ABCDEF"; // Will only be used if above is set to true, else will use a-z, A-Z, 0-9
+$usersfile = "protected/users.php";
 
 //Helper function to save code on making somewhat file safe strings
 function fileNameString($Name){
@@ -52,7 +53,7 @@ if(isset($_POST['passcode']) && !empty($_POST['passcode'])){
 if(!$_error){
 
     //Throws an error if we can not get our users file loaded. Used include to be able to prevent require from stoping the script and not showing a nice error message
-    (@include_once ('protected/users.php')) OR die("Script Error: Please notify the admin about this. The server can not find user files!");
+    (@include_once ($usersfile)) OR die("Script Error: Please notify the admin about this. The server can not find user files!");
 
     //If we dont get an array we stop.
     if(!is_array($users)){
